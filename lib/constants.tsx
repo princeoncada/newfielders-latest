@@ -5,9 +5,26 @@ import preKinder from "@/assets/Home/Programs/PreKinder.png";
 import elementary from "@/assets/Home/Programs/Elementary.png";
 import contentImage from "@/assets/Home/Content/Image.png";
 import docNap from "@/assets/Home/Founder/DOCNAP.png";
+import firstQ from "@/assets/Shared/first q.jpg";
+import secondQ from "@/assets/Shared/second q.jpg";
+import thirdQ from "@/assets/Shared/third q.jpg";
+import fourthQ from "@/assets/Shared/fourth q.jpg";
 import welcomeBack from "@/assets/Home/News/welbac.png";
 import julyActivities from "@/assets/Home/News/julact.png";
 import newsFirst from "@/assets/Home/News/teacher.jpg";
+
+export const HEADER_CONTENT = {
+  title: "The NewFields STEM School of Davao",
+  subtitle: "Operated by ACCESSEDU, INC.",
+  nav_links: [
+    { href: "/", label: "Home" },
+    { href: "/about", label: "About Us" },
+    { href: "/admission", label: "Admissions" },
+    { href: "/news", label: "News" },
+    { href: "/newfielders", label: "NewFielder's Life" },
+    { href: "/contact", label: "Contact Us" },
+  ],
+}
 
 export const HOME_CONTENTS = {
   hero: {
@@ -59,22 +76,22 @@ export const HOME_CONTENTS = {
     content: [
       {
         title: "First Quarter Activities",
-        image: "/images/first q.jpg",
+        image: firstQ,
         link: "https://www.youtube.com/watch?v=x7Op3VT6Ezs&ab_channel=TheNewFieldsSTEMSchoolofDavao"
       },
       {
         title: "Second Quarter Activities",
-        image: "/images/second q.jpg",
+        image: secondQ,
         link: "https://www.youtube.com/watch?v=ia1cSZCSbCU&ab_channel=TheNewFieldsSTEMSchoolofDavao"
       },
       {
         title: "Third & Fourth Quarter Activities",
-        image: "/images/third q.jpg",
+        image: thirdQ,
         link: "https://www.youtube.com/watch?v=KzHPmdXXO2U&ab_channel=TheNewFieldsSTEMSchoolofDavao"
       },
       {
         title: "Academic Interschool Activities",
-        image: "/images/fourth q.jpg",
+        image: fourthQ,
         link: "https://www.youtube.com/watch?v=D6JjEId-Fo8&ab_channel=TheNewFieldsSTEMSchoolofDavao"
       }
     ]
