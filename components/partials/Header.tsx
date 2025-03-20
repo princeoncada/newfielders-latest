@@ -4,37 +4,45 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
+import { HEADER_CONTENT } from "@/lib/constants";
+
 export default function Header() {
 	const [showMenu, setShowMenu] = useState(false);
 
-	function handleClick() {
-		setShowMenu((x) => !x);
+	function toggleMenu() {
+		setShowMenu((prev) => !prev);
+	}
+
+	function closeMenu() {
+		setShowMenu(false);
 	}
 
 	return (
 		<>
+			{/* Mobile Header */}
 			<header className="sticky top-0 bg-white flex flex-row justify-between p-5 z-50 font-heading lg:hidden w-full">
 				<div className="flex flex-row gap-2">
 					<div className="flex items-center">
 						<Image
 							src="/images/TNFSSD LOGO.png"
-							alt="none"
-							width="60"
-							height="100"
+							alt="The NewFields STEM School of Davao"
+							width={60}
+							height={100}
 						/>
 					</div>
 					<div className="flex flex-col justify-center">
-						<div className="text-sm font-medium text-[#00582C]">
-							The NewFields STEM School of Davao
-						</div>
-						<div className="text-[10px] text-[#333333]">
-							Operated by ACCESSEDU, INC.
-						</div>
+						<h1 className="text-sm font-medium text-[#00582C]">
+							{HEADER_CONTENT.title}
+						</h1>
+						<h2 className="text-[10px] text-[#333333]">
+							{HEADER_CONTENT.subtitle}
+						</h2>
 					</div>
 				</div>
 				<button
-					onClick={handleClick}
-					className="flex flex-col justify-center items-end gap-1"
+					onClick={toggleMenu}
+					className="flex flex-col justify-center items-end gap-1 cursor-pointer"
+					aria-label="Toggle Menu"
 				>
 					<div
 						className={`w-6 h-1 bg-black transition-all duration-300 ease-in-out ${
@@ -54,49 +62,49 @@ export default function Header() {
 				</button>
 			</header>
 
+			{/* Mobile Menu */}
 			<menu className="lg:hidden fixed top-20 z-20 w-full">
 				<div
-					className={`z-10 absolute w-screen max-w-full bg-[#F0F0F0] text-[#333333]  flex flex-col items-end p-5 transition-all duration-300 ease-in-out ${
-						showMenu ? "" : "-translate-y-64"
+					className={`absolute w-screen max-w-full bg-[#F0F0F0] text-[#333333] flex flex-col items-end p-5 transition-all duration-300 ease-in-out ${
+						showMenu ? "translate-y-0" : "-translate-y-64"
 					} font-heading gap-3 text-sm`}
 				>
-					<Link href="/">Home</Link>
-					<Link href="/about">About Us</Link>
-					<Link href="/admission">Admissions</Link>
-					<Link href="/news">News</Link>
-					<Link href="/newfielders">NewFielder&apos;s Life</Link>
-					<Link href="/contact">Contact Us</Link>
+					{HEADER_CONTENT.nav_links.map(({ href, label }) => (
+						<Link key={href} href={href} onClick={closeMenu}>
+							{label}
+						</Link>
+					))}
 				</div>
 			</menu>
 
+			{/* Desktop Header */}
 			<header className="bg-white z-50 font-heading sticky top-0 w-full">
-				<div className="hidden lg:flex flex-row justify-between py-5 px-4 xl:px-0 max-w-[1440px] mx-auto">
-					<Link href={`/`} className="flex flex-row gap-4">
+				<div className="hidden lg:flex flex-row justify-between py-5 px-4 max-w-[1440px] mx-auto">
+					<Link href="/" className="flex flex-row gap-4">
 						<div className="flex items-center">
 							<Image
 								src="/images/TNFSSD LOGO.png"
-								alt="none"
-								width="70"
-								height="70"
+								alt="The NewFields STEM School of Davao"
+								width={70}
+								height={70}
 							/>
 						</div>
 						<div className="flex flex-col justify-center">
-							<div className="text-[20px] font-medium text-[#00582C]">
-								The NewFields STEM School of Davao
-							</div>
-							<div className="text-[16px] text-[#333333]">
-								Operated by ACCESSEDU, INC.
-							</div>
+							<h1 className="text-[20px] font-medium text-[#00582C]">
+								{HEADER_CONTENT.title}
+							</h1>
+							<h2 className="text-[16px] text-[#333333]">
+								{HEADER_CONTENT.subtitle}
+							</h2>
 						</div>
 					</Link>
-					<div className="flex flex-row items-center gap-6 text-[#017E3F] text-[14.5px]">
-						<Link href="/">Home</Link>
-						<Link href="/about">About Us</Link>
-						<Link href="/admission">Admissions</Link>
-						<Link href="/news">News</Link>
-						<Link href="/newfielders">NewFielder&apos;s Life</Link>
-						<Link href="/contact">Contact Us</Link>
-					</div>
+					<nav className="flex flex-row items-center gap-6 text-[#017E3F] text-[14.5px]">
+						{HEADER_CONTENT.nav_links.map(({ href, label }) => (
+							<Link key={href} href={href}>
+								{label}
+							</Link>
+						))}
+					</nav>
 				</div>
 			</header>
 		</>
