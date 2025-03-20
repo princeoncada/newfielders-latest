@@ -1,5 +1,46 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 @theme {
   --breakpoint-xl: 90rem;
+}
+
+.prose h1 {
+  @apply text-2xl font-semibold text-[#00582C] lg:text-4xl lg:font-bold mb-4 mt-8;
+}
+
+.prose h2 {
+  @apply text-lg text-[#017E3F] font-medium lg:text-2xl text-start mb-2 mt-0;
+}
+
+.prose h3.note {
+  @apply text-lg text-[#272727] font-medium lg:text-xl text-start mb-2 mt-0 italic underline underline-offset-4;
+}
+
+.prose p {
+  @apply text-[#333333] text-justify;
+}
+
+.prose img {
+  @apply mb-5 mt-0;
+}
+
+.prose ul {
+  @apply list-disc pl-5 text-[#333333];
+}
+
+.prose li {
+  @apply mb-0 mt-0;
+}
+
+.prose li::marker {
+  @apply text-[#444444] lg:text-lg;
+}
+
+.prose video {
+  @apply mb-5 mt-0;
+}
+
+.prose a {
+  @apply no-underline
 }
