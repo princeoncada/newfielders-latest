@@ -1,9 +1,9 @@
-import React from 'react'
+import About from '@/components/About'
 
-const About = () => {
+const Page = () => {
   return (
-    <div>About</div>
+    <About />
   )
 }
 
-export default About
+export default Page
