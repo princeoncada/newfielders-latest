@@ -5,7 +5,7 @@ import { HOME_CONTENTS } from '@/lib/constants'
 const Programs = () => {
   return (
     <section>
-      <div className="flex flex-col gap-4 py-8 xl:py-12 max-w-[1440px] mx-auto px-4 xl:px-0">
+      <div className="flex flex-col gap-4 py-8 xl:py-12 max-w-[1440px] mx-auto px-4">
         <h1 className="font-bold text-2xl xl:text-[42px] xl:text-start text-[#028141]">
           {HOME_CONTENTS.programs.title}
         </h1>
