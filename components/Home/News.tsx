@@ -6,7 +6,7 @@ import { HOME_CONTENTS } from '@/lib/constants'
 const News = () => {
   return (
     <section>
-      <div className="flex flex-col gap-4 max-w-[1440px] mx-auto px-4 xl:px-0 py-8 xl:py-12 font-heading">
+      <div className="flex flex-col gap-4 max-w-[1440px] mx-auto px-4 py-8 xl:py-12 font-heading">
         <h1 className="text-2xl font-bold text-[#028141] xl:text-[48px] xl:mb-1">
           {HOME_CONTENTS.news.title}
         </h1>
