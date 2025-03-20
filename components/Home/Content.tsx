@@ -5,7 +5,7 @@ import { HOME_CONTENTS } from '@/lib/constants'
 const Content = () => {
   return (
     <section>
-      <div className="flex flex-col md:flex-row max-w-[1440px] mx-auto py-8 xl:py-12">
+      <div className="flex flex-col md:flex-row max-w-[1440px] mx-auto py-8 xl:py-12 px-4">
         <div
           className="w-full h-[100vw] md:h-auto md:w-1/2 md:aspect-square bg-cover bg-center"
           style={{
