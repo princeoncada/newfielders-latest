@@ -9,7 +9,6 @@ type GallerySectionProps = {
     image: StaticImageData
     link: string
   }[]
-
 }
 
 const GallerySection = ({ gallery }: GallerySectionProps) => {
