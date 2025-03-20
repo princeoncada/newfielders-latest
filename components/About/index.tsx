@@ -203,7 +203,7 @@ export default function About() {
           </p>
 
           <h2>
-            Shaping Tomorrow's Leaders
+            Shaping Tomorrow&apos;s Leaders
           </h2>
           <p>
             Our problem-based and collaborative learning

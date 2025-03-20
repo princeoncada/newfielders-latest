@@ -66,7 +66,7 @@ export default function NewFielders() {
           <p>
             Welcome to the NFSSD&apos;s Photo Gallery, a vibrant
             collection of snapshots capturing the essence of our
-            educational community. Here, you'll discover a
+            educational community. Here, you&apos;ll discover a
             treasure trove of images showcasing our diverse
             school and className activities, each filled with
             the energy, creativity, and enthusiasm of our
@@ -180,9 +180,9 @@ export default function NewFielders() {
             NewFields STEM School of Davao&apos;s Interest
             groups! We have a diverse range of interest
             groups/clubs tailored to spark your passions and
-            foster a sense of community. Whether you're a
+            foster a sense of community. Whether you&apos;re a
             budding artist, a tech enthusiast, or a star dancer,
-            there's something for everyone. Join and make this
+            there&apos;s something for everyone. Join and make this
             school year unforgettable!
           </p>
 
@@ -194,7 +194,7 @@ export default function NewFielders() {
           <p>
             The NewFields STEM School of Davao is excited to
             introduce the Supreme NewFields Government (SNG), a
-            student council aimed at enhancing the school's
+            student council aimed at enhancing the school&apos;s
             academic and social environment. This council will
             represent the student body, advocate for their
             needs, organize activities, and foster community and
@@ -220,7 +220,7 @@ export default function NewFielders() {
             in grade 6. These alumni exemplify the high
             standards and quality education provided by The
             NewFields STEM School of Davao, showcasing the
-            school's commitment to nurturing the next generation
+            school&apos;s commitment to nurturing the next generation
             of leaders in science, technology, engineering, and
             mathematics.
           </p>
@@ -258,7 +258,7 @@ export default function NewFielders() {
             </li>
             <li>
               Participation in diverse extracurricular
-              activities not only enhances students'
+              activities not only enhances students&apos;
               overall experiences but also cultivates a
               well-rounded skill set that extends beyond
               academics.

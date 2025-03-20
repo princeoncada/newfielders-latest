@@ -80,7 +80,7 @@ const Carousel = () => {
             </button>
 
             <div className="flex flex-row overflow-hidden bg-[#F0F0F0] flex-grow">
-                {slides.map((slide, index) => (
+                {slides.map((slide) => (
                     <div key={slide.name} className="flex flex-col md:flex-row min-w-full h-full transition-transform ease-in-out duration-500 md:w-[4.9rem]" style={{
                         transform: `translateX(${-(currentSlide) * 100}%)`
                     }}>

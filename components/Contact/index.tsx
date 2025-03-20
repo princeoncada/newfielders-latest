@@ -3,7 +3,6 @@ import Link from "next/link";
 
 import Hero from "@/components/partials/Hero";
 import CTA from "@/components/partials/CTA";
-import SubArticle from "@/components/partials/SubArticle";
 
 export default function Contact() {
   return (

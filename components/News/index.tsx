@@ -3,7 +3,6 @@ import Link from "next/link";
 
 import Hero from "@/components/partials/Hero";
 import CTA from "@/components/partials/CTA";
-import SubArticle from "@/components/partials/SubArticle";
 import GallerySection from "../partials/GallerySection";
 import { HOME_CONTENTS } from "@/lib/constants";
 
@@ -55,8 +54,8 @@ export default function News() {
           </h1>
           <p>
             Welcome to the official announcements and updates
-            page of The Newfield's STEM School of Davao! Here,
-            you'll find the latest news, important dates, and
+            page of The Newfield&apos;s STEM School of Davao! Here,
+            you&apos;ll find the latest news, important dates, and
             crucial information to keep students, parents, and
             staff in the loop.
           </p>
@@ -110,7 +109,7 @@ export default function News() {
             Math and Science Quiz Bowl and the Spelling Bee
             pushed our students to excel, while the Literary
             Festival fostered public speaking and self
-            esteem. Our Foundation Day marked the school's
+            esteem. Our Foundation Day marked the school&apos;s
             growth and achievements, and the first ever
             Parents and Teachers Sports Fest promoted
             camaraderie and fitness.
