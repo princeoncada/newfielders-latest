@@ -19,6 +19,9 @@ import ModernDance from "@/assets/News/MODERN DANCE.png"
 import Qualifiers from "@/assets/News/DCAA QUALIFIERS.png"
 import Medalist from "@/assets/News/TKD DCAA BRONZE MEDALIST.png"
 
+import welcomeBack from "@/assets/Shared/welbac.png";
+import julyActivities from "@/assets/Shared/julact.png";
+
 const NEWS_ASSETS = {
   pisay: {
     image: Pisay,
@@ -128,19 +131,15 @@ export default function News() {
             <div>
               <Image
                 className="rounded-md shadow-lg"
-                src="/images/welbac.png"
-                width={1000}
-                height={100}
-                alt="placeholder"
+                src={welcomeBack}
+                alt="Welcome Back"
               ></Image>
             </div>
             <div>
               <Image
                 className="rounded-md shadow-lg"
-                src="/images/julact.png"
-                width={1000}
-                height={100}
-                alt="placeholder"
+                src={julyActivities}
+                alt="July Activities"
               ></Image>
             </div>
           </div>

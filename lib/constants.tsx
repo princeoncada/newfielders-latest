@@ -9,8 +9,8 @@ import firstQ from "@/assets/Shared/first q.jpg";
 import secondQ from "@/assets/Shared/second q.jpg";
 import thirdQ from "@/assets/Shared/third q.jpg";
 import fourthQ from "@/assets/Shared/fourth q.jpg";
-import welcomeBack from "@/assets/Home/News/welbac.png";
-import julyActivities from "@/assets/Home/News/julact.png";
+import welcomeBack from "@/assets/Shared/welbac.png";
+import julyActivities from "@/assets/Shared/julact.png";
 import newsFirst from "@/assets/Home/News/teacher.jpg";
 
 export const HEADER_CONTENT = {
