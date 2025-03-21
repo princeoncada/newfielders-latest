@@ -6,6 +6,70 @@ import CTA from "@/components/partials/CTA";
 import GallerySection from "../partials/GallerySection";
 import { HOME_CONTENTS } from "@/lib/constants";
 
+import Pisay from "@/assets/News/PISAY.png"
+import Passers from "@/assets/News/PISAY (2).png"
+import Quipper from "@/assets/News/QUIPPER QUIZBOWL.png"
+import SpellingBee from "@/assets/News/Spelling bee.png"
+import LitFest from "@/assets/News/LITFEST.png"
+import Chess from "@/assets/News/Chess daprisa.png"
+import Taekwondo from "@/assets/News/TKD daprisa.png"
+import CheerDance from "@/assets/News/CHEERDANCE.png"
+import Soccer from "@/assets/News/TKD Soccer.png"
+import ModernDance from "@/assets/News/MODERN DANCE.png"
+import Qualifiers from "@/assets/News/DCAA QUALIFIERS.png"
+import Medalist from "@/assets/News/TKD DCAA BRONZE MEDALIST.png"
+
+const NEWS_ASSETS = {
+  pisay: {
+    image: Pisay,
+    alt: "PISAY SMART UP 2025",
+  },
+  passers: {
+    image: Passers,
+    alt: "PSHSS - NCE Passers",
+  },
+  quipper: {
+    image: Quipper,
+    alt: "Quipper Quiz Bowl",
+  },
+  spellingBee: {
+    image: SpellingBee,
+    alt: "DAPRISA Spelling Bee",
+  },
+  litFest: {
+    image: LitFest,
+    alt: "DAPRISA Literary Festival",
+  },
+  chess: {
+    image: Chess,
+    alt: "DAPRISA Chess",
+  },
+  taekwondo: {
+    image: Taekwondo,
+    alt: "DAPRISA Taekwondo",
+  },
+  cheerDance: {
+    image: CheerDance,
+    alt: "DAPRISA Cheer Dance",
+  },
+  soccer: {
+    image: Soccer,
+    alt: "DAPRISA Soccer",
+  },
+  modernDance: {
+    image: ModernDance,
+    alt: "DAPRISA Modern Dance",
+  },
+  qualifiers: {
+    image: Qualifiers,
+    alt: "DCAA Qualifiers",
+  },
+  medalist: {
+    image: Medalist,
+    alt: "DCAA Taekwondo Bronze Medalist",
+  },
+}
+
 export default function News() {
   return (
     <div className="bg-[#F0F0F0]">
@@ -182,6 +246,153 @@ export default function News() {
             controls
             width="100%"
           />
+
+          <h1>
+            NewFielders Shine in Academics and Athletics: A Celebration of Excellence
+          </h1>
+          <p>
+            At The NewFields STEM School of Davao, we take immense pride in the achievements of our students, who continue to excel in both academic and athletic areas. Here’s a roundup of our latest triumphs:
+          </p>
+
+          <h1>
+            Academic Achievements
+          </h1>
+          <h2>
+            PISAY SMART UP 2025
+          </h2>
+          <p>
+            Our young innovators showcased their skills and intellect at the PISAY SMART UP 2025, proving that NewFielders are future-ready!
+          </p>
+
+          <Image
+            src={NEWS_ASSETS.pisay.image}
+            alt={NEWS_ASSETS.pisay.alt}
+          />
+
+          <h2>
+            PSHSS - NCE Passers
+          </h2>
+          <p>
+            Congratulations to our NewFielders who successfully passed the Philippine Science High School National Competitive Examination! Your hard work and dedication have truly paid off.
+          </p>
+
+          <Image
+            src={NEWS_ASSETS.passers.image}
+            alt={NEWS_ASSETS.passers.alt}
+          />
+
+          <h2>
+            Quipper Quiz Bowl
+          </h2>
+          <p>
+            Our NewFielders rose to the challenge and made a remarkable performance in the Quipper Quiz Bowl.
+          </p>
+
+          <Image
+            src={NEWS_ASSETS.quipper.image}
+            alt={NEWS_ASSETS.quipper.alt}
+          />
+
+          <h2>
+            DAPRISA Spelling Bee
+          </h2>
+          <p>
+            Spelling excellence was on full display as our students clinched notable placements in the DAPRISA Spelling Bee.
+          </p>
+
+          <Image
+            src={NEWS_ASSETS.spellingBee.image}
+            alt={NEWS_ASSETS.spellingBee.alt}
+          />
+
+          <h2>
+            DAPRISA Literary Festival
+          </h2>
+          <p>
+            Celebrating the power of words, our students made an impact at the DAPRISA Literary Festival, bringing home honors for their creativity and eloquence.
+          </p>
+
+          <Image
+            src={NEWS_ASSETS.litFest.image}
+            alt={NEWS_ASSETS.litFest.alt}
+          />
+
+          <h1>
+            Athletic Excellence
+          </h1>
+          <h2>
+            DAPRISA GAMES 2025
+          </h2>
+          <p>
+            Our student-athletes dominated the DAPRISA Games across multiple categories:
+          </p>
+          <ul>
+            <li>
+              <p><strong>Chess Category:</strong> Strategic minds battled it out in the chess tournament, bringing pride to our school.</p>
+              <Image
+                src={NEWS_ASSETS.chess.image}
+                alt={NEWS_ASSETS.chess.alt}
+              />
+            </li>
+            <li>
+              <p><strong>Taekwondo:</strong> Strength, agility, and discipline led our athletes to victory.</p>
+              <Image
+                src={NEWS_ASSETS.taekwondo.image}
+                alt={NEWS_ASSETS.taekwondo.alt}
+              />
+            </li>
+            <li>
+              <p><strong>Cheer Dance:</strong> ur spirited team delivered an electrifying performance that wowed the crowd.</p>
+              <Image
+                src={NEWS_ASSETS.cheerDance.image}
+                alt={NEWS_ASSETS.cheerDance.alt}
+              />
+            </li>
+            <li>
+              <p><strong>Soccer:</strong> A thrilling display of teamwork and sportsmanship in the soccer field.</p>
+              <Image
+                src={NEWS_ASSETS.soccer.image}
+                alt={NEWS_ASSETS.soccer.alt}
+              />
+            </li>
+          </ul>
+
+          <h2>
+            DAPRISA Musical Fest - Modern Dance
+          </h2>
+          <p>
+            Grace and rhythm took center stage as our dancers showcased their talent at the DAPRISA Musical Fest.
+          </p>
+          <Image
+            src={NEWS_ASSETS.modernDance.image}
+            alt={NEWS_ASSETS.modernDance.alt}
+          />
+
+          <h2>
+            DCAA Qualifiers & Medalists
+          </h2>
+          <p>
+            Our Taekwondo warriors made it to the next level, qualifying for the DCAA and securing a bronze medal in the competition.
+          </p>
+          <ul>
+            <li>
+              <p><strong>DCAA Qualifiers:</strong></p>
+              <Image
+                src={NEWS_ASSETS.qualifiers.image}
+                alt={NEWS_ASSETS.qualifiers.alt}
+              />
+            </li>
+            <li>
+              <p><strong>DCAA Bronze Medalists:</strong></p>
+              <Image
+                src={NEWS_ASSETS.medalist.image}
+                alt={NEWS_ASSETS.medalist.alt}
+              />
+            </li>
+          </ul>
+          <p className="mb-8">
+            These accomplishments are a testament to the hard work, perseverance, and dedication of our students, teachers, and coaches. Congratulations to all our NewFielders for making us proud! Keep soaring high!
+          </p>
         </section>
       </div>
       <CTA />
