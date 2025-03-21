@@ -94,14 +94,8 @@ export default function Footer() {
               </div>
 
               <div className="flex flex-row gap-1 text-4xl">
-                <Link href="#">
+                <Link href="https://www.facebook.com/newfieldsstemschool">
                   <i className="bx bxl-facebook-square"></i>
-                </Link>
-                <Link href="#">
-                  <i className="bx bxl-instagram"></i>
-                </Link>
-                <Link href="#">
-                  <i className="bx bxl-linkedin-square"></i>
                 </Link>
               </div>
             </div>
