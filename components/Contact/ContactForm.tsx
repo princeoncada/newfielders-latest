@@ -98,10 +98,14 @@ const ContactForm = () => {
       reset();
     } catch (error) {
       setEmailError(true);
-      if ((error as any)?.response?.status === 429) {
-        setSubmitMessage("Too many submissions. Please try again later.");
+      if (axios.isAxiosError(error)) {
+        if (error.response?.status === 429) {
+          setSubmitMessage("Too many submissions. Please try again later.");
+        } else {
+          setSubmitMessage("Something went wrong. Please try again later.");
+        }
       } else {
-        setSubmitMessage("Something went wrong. Please try again later.");
+        setSubmitMessage("An unexpected error occurred.");
       }
     } finally {
       setLoading(false);
@@ -111,114 +115,114 @@ const ContactForm = () => {
         setSubmitMessage(null);
       }, 5000);
     }
-  };
 
-  return (
-    <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col mt-1 gap-1 lg:gap-2 items-start">
-      {/* Honeypot Field - Randomized Name and Hidden */}
-      <input
-        type="text"
-        placeholder="Tell Us More"
-        {...register(honeyPotFieldName)}
-        className="hidden"
-        tabIndex={-1}
-        autoComplete="off"
-      />
 
-      {/* Timestamp Field - Hidden */}
-      <input
-        type="hidden"
-        value={loadTime.toString()}
-        {...register("timestamp")}
-      />
+    return (
+      <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col mt-1 gap-1 lg:gap-2 items-start">
+        {/* Honeypot Field - Randomized Name and Hidden */}
+        <input
+          type="text"
+          placeholder="Tell Us More"
+          {...register(honeyPotFieldName)}
+          className="hidden"
+          tabIndex={-1}
+          autoComplete="off"
+        />
 
-      <label className="w-full">
-        {errors.email && <div className="text-red-600! text-sm mb-1.5 text-[16px]">{errors.email.message}</div>}
-        <div className='relative text-gray-400 focus-within:text-gray-600 flex flex-row justify-start h-full'>
-          <Image
-            className="pointer-events-none w-6 h-full text-red-300 absolute top-0 bottom-0 left-[6px] lg:left-[11px] my-0!"
-            src={`/svg/mail.svg`}
-            alt=""
-            width={100}
-            height={100}
-          />
+        {/* Timestamp Field - Hidden */}
+        <input
+          type="hidden"
+          value={loadTime.toString()}
+          {...register("timestamp")}
+        />
 
-          <input
-            {...register("email")}
-            placeholder="Email"
-            className="w-full rounded-[6px] form-input border border-b-2 lg:border-b-[3px] border-gray-900 py-2 bg-white placeholder:text-[#555555] text-black appearance-none block pl-[32px] lg:pl-[40px] focus:outline-none text-[16px]"
-          />
-        </div>
-      </label>
+        <label className="w-full">
+          {errors.email && <div className="text-red-600! text-sm mb-1.5 text-[16px]">{errors.email.message}</div>}
+          <div className='relative text-gray-400 focus-within:text-gray-600 flex flex-row justify-start h-full'>
+            <Image
+              className="pointer-events-none w-6 h-full text-red-300 absolute top-0 bottom-0 left-[6px] lg:left-[11px] my-0!"
+              src={`/svg/mail.svg`}
+              alt=""
+              width={100}
+              height={100}
+            />
 
-      <label className="w-full">
-        {errors.phone && <div className="text-red-600! text-sm my-1.5 text-[16px]">{errors.phone.message}</div>}
-        <div className='relative text-gray-400 focus-within:text-gray-600 flex flex-row justify-start h-full'>
-          <Image
-            className="pointer-events-none w-6 h-full text-red-300 absolute top-0 bottom-0 left-[6px] lg:left-[11px] my-0!"
-            src={`/svg/phone.svg`}
-            alt=""
-            width={100}
-            height={100}
-          />
+            <input
+              {...register("email")}
+              placeholder="Email"
+              className="w-full rounded-[6px] form-input border border-b-2 lg:border-b-[3px] border-gray-900 py-2 bg-white placeholder:text-[#555555] text-black appearance-none block pl-[32px] lg:pl-[40px] focus:outline-none text-[16px]"
+            />
+          </div>
+        </label>
 
-          <input
-            {...register("phone")}
-            placeholder="Phone Number"
-            className="w-full rounded-[6px] form-input border border-b-2 lg:border-b-[3px] border-gray-900 py-2 bg-white placeholder:text-[#555555] text-black appearance-none block pl-[32px] lg:pl-[40px] focus:outline-none text-[16px]"
-          />
-        </div>
-      </label>
+        <label className="w-full">
+          {errors.phone && <div className="text-red-600! text-sm my-1.5 text-[16px]">{errors.phone.message}</div>}
+          <div className='relative text-gray-400 focus-within:text-gray-600 flex flex-row justify-start h-full'>
+            <Image
+              className="pointer-events-none w-6 h-full text-red-300 absolute top-0 bottom-0 left-[6px] lg:left-[11px] my-0!"
+              src={`/svg/phone.svg`}
+              alt=""
+              width={100}
+              height={100}
+            />
 
-      <label className="w-full">
-        {errors.subject && <div className="text-red-600! text-sm my-1.5 text-[16px]">{errors.subject.message}</div>}
-        <div className='relative text-gray-400 focus-within:text-gray-600 flex flex-row justify-start'>
-          <Image
-            className="pointer-events-none w-6 h-full text-red-300 absolute top-0 bottom-0 left-[6px] lg:left-[11px] my-0!"
-            src={`/svg/book.svg`}
-            alt=""
-            width={100}
-            height={100}
-          />
+            <input
+              {...register("phone")}
+              placeholder="Phone Number"
+              className="w-full rounded-[6px] form-input border border-b-2 lg:border-b-[3px] border-gray-900 py-2 bg-white placeholder:text-[#555555] text-black appearance-none block pl-[32px] lg:pl-[40px] focus:outline-none text-[16px]"
+            />
+          </div>
+        </label>
 
-          <input
-            {...register("subject")}
-            placeholder="Subject"
-            className="w-full rounded-[6px] form-input border border-b-2 lg:border-b-[3px] border-gray-900 py-2 bg-white placeholder:text-[#555555] text-black appearance-none block pl-[32px] lg:pl-[40px] focus:outline-none text-[16px]"
-          />
-        </div>
-      </label>
+        <label className="w-full">
+          {errors.subject && <div className="text-red-600! text-sm my-1.5 text-[16px]">{errors.subject.message}</div>}
+          <div className='relative text-gray-400 focus-within:text-gray-600 flex flex-row justify-start'>
+            <Image
+              className="pointer-events-none w-6 h-full text-red-300 absolute top-0 bottom-0 left-[6px] lg:left-[11px] my-0!"
+              src={`/svg/book.svg`}
+              alt=""
+              width={100}
+              height={100}
+            />
 
-      <label className="w-full">
-        {errors.message && <div className="text-red-600! text-sm my-1.5 text-[16px]">{errors.message.message}</div>}
-        <div className='relative text-gray-400 focus-within:text-gray-600 flex flex-row justify-start '>
-          <Image
-            className="pointer-events-none w-6 h-6 text-red-300 absolute top-[6px] left-[6px] lg:top-[11px] lg:left-[11px]"
-            src={`/svg/book-open.svg`}
-            alt=""
-            width={100}
-            height={100}
-          />
+            <input
+              {...register("subject")}
+              placeholder="Subject"
+              className="w-full rounded-[6px] form-input border border-b-2 lg:border-b-[3px] border-gray-900 py-2 bg-white placeholder:text-[#555555] text-black appearance-none block pl-[32px] lg:pl-[40px] focus:outline-none text-[16px]"
+            />
+          </div>
+        </label>
 
-          <textarea
-            {...register("message")}
-            placeholder="Message"
-            rows={10}
-            className="w-full rounded-[6px] form-input border border-b-2 lg:border-b-[3px] border-gray-900 py-1 md:py-2 bg-white placeholder:text-[#555555] text-black appearance-none block pl-[32px] pr-[12px] lg:pl-[40px] focus:outline-none text-[16px]"
-          ></textarea>
-        </div>
-      </label>
+        <label className="w-full">
+          {errors.message && <div className="text-red-600! text-sm my-1.5 text-[16px]">{errors.message.message}</div>}
+          <div className='relative text-gray-400 focus-within:text-gray-600 flex flex-row justify-start '>
+            <Image
+              className="pointer-events-none w-6 h-6 text-red-300 absolute top-[6px] left-[6px] lg:top-[11px] lg:left-[11px]"
+              src={`/svg/book-open.svg`}
+              alt=""
+              width={100}
+              height={100}
+            />
 
-      {emailSuccess && <div className="text-green-600! flex gap-2 items-center"><Send size={16} /> {submitMessage}</div>}
-      {emailError && <div className="text-red-600! flex gap-2 items-center"><TriangleAlert size={16} /> {submitMessage}</div>}
+            <textarea
+              {...register("message")}
+              placeholder="Message"
+              rows={10}
+              className="w-full rounded-[6px] form-input border border-b-2 lg:border-b-[3px] border-gray-900 py-1 md:py-2 bg-white placeholder:text-[#555555] text-black appearance-none block pl-[32px] pr-[12px] lg:pl-[40px] focus:outline-none text-[16px]"
+            ></textarea>
+          </div>
+        </label>
 
-      <button type='submit' className="bg-[#017E3F] text-white p-2.5 px-8 mt-1 lg:text-lg font-bold lg:py-3 lg:px-16 cursor-pointer" disabled={loading}>
-        {loading ? (
-          <LoaderCircle size={20} className="animate-spin" />
-        ) : "Submit"}
-      </button>
-    </form>
-  )
-}
+        {emailSuccess && <div className="text-green-600! flex gap-2 items-center"><Send size={16} /> {submitMessage}</div>}
+        {emailError && <div className="text-red-600! flex gap-2 items-center"><TriangleAlert size={16} /> {submitMessage}</div>}
 
-export default ContactForm
+        <button type='submit' className="bg-[#017E3F] text-white p-2.5 px-8 mt-1 lg:text-lg font-bold lg:py-3 lg:px-16 cursor-pointer" disabled={loading}>
+          {loading ? (
+            <LoaderCircle size={20} className="animate-spin" />
+          ) : "Submit"}
+        </button>
+      </form>
+    )
+  }
+
+  export default ContactForm
