@@ -3,6 +3,8 @@ import Link from "next/link";
 
 import Hero from "@/components/partials/Hero";
 import CTA from "@/components/partials/CTA";
+import ContactForm from "./ContactForm";
+import GoogleCaptchaWrapper from "./GoogleCaptchaWrapper";
 
 export default function Contact() {
   return (
@@ -44,92 +46,9 @@ export default function Contact() {
             Send us a Message
           </h2>
 
-          <form className="flex flex-col mt-1 gap-1 lg:gap-2 items-start">
-            <label className="relative text-gray-400 focus-within:text-gray-600 flex flex-row justify-start w-full">
-              <Image
-                className="pointer-events-none w-6 h-6 text-red-300 absolute top-[6px] left-[6px] lg:top-[11px] lg:left-[11px]"
-                src={`/svg/user.svg`}
-                alt=""
-                width={100}
-                height={100}
-              />
-
-              <input
-                name="email"
-                id="email"
-                placeholder="Name"
-                className="w-full rounded-[6px] form-input border border-b-2 lg:border-b-[3px] border-gray-900 py-2 bg-white placeholder:text-[#555555] text-black appearance-none block pl-[32px] lg:pl-[40px] focus:outline-none text-[16px]"
-              />
-            </label>
-            <label className="relative text-gray-400 focus-within:text-gray-600 flex flex-row justify-start w-full">
-              <Image
-                className="pointer-events-none w-6 h-6 text-red-300 absolute top-[6px] left-[6px] lg:top-[11px] lg:left-[11px]"
-                src={`/svg/mail.svg`}
-                alt=""
-                width={100}
-                height={100}
-              />
-
-              <input
-                name="email"
-                id="email"
-                placeholder="Email"
-                className="w-full rounded-[6px] form-input border border-b-2 lg:border-b-[3px] border-gray-900 py-2 bg-white placeholder:text-[#555555] text-black appearance-none block pl-[32px] lg:pl-[40px] focus:outline-none text-[16px]"
-              />
-            </label>
-            <label className="relative text-gray-400 focus-within:text-gray-600 flex flex-row justify-start w-full">
-              <Image
-                className="pointer-events-none w-6 h-6 text-red-300 absolute top-[6px] left-[6px] lg:top-[11px] lg:left-[11px]"
-                src={`/svg/phone.svg`}
-                alt=""
-                width={100}
-                height={100}
-              />
-
-              <input
-                name="email"
-                id="email"
-                placeholder="Phone Number"
-                className="w-full rounded-[6px] form-input border border-b-2 lg:border-b-[3px] border-gray-900 py-2 bg-white placeholder:text-[#555555] text-black appearance-none block pl-[32px] lg:pl-[40px] focus:outline-none text-[16px]"
-              />
-            </label>
-            <label className="relative text-gray-400 focus-within:text-gray-600 flex flex-row justify-start w-full">
-              <Image
-                className="pointer-events-none w-6 h-6 text-red-300 absolute top-[6px] left-[6px] lg:top-[11px] lg:left-[11px]"
-                src={`/svg/book.svg`}
-                alt=""
-                width={100}
-                height={100}
-              />
-
-              <input
-                name="email"
-                id="email"
-                placeholder="Subject"
-                className="w-full rounded-[6px] form-input border border-b-2 lg:border-b-[3px] border-gray-900 py-2 bg-white placeholder:text-[#555555] text-black appearance-none block pl-[32px] lg:pl-[40px] focus:outline-none text-[16px]"
-              />
-            </label>
-            <label className="relative text-gray-400 focus-within:text-gray-600 flex flex-row justify-start w-full">
-              <Image
-                className="pointer-events-none w-6 h-6 text-red-300 absolute top-[6px] left-[6px] lg:top-[11px] lg:left-[11px]"
-                src={`/svg/book-open.svg`}
-                alt=""
-                width={100}
-                height={100}
-              />
-
-              <textarea
-                name="email"
-                id="email"
-                placeholder="Message"
-                rows={10}
-                className="w-full rounded-[6px] form-input border border-b-2 lg:border-b-[3px] border-gray-900 py-2 bg-white placeholder:text-[#555555] text-black appearance-none block pl-[32px] pr-[12px] lg:pl-[40px] focus:outline-none text-[16px]"
-              ></textarea>
-            </label>
-            <button className="bg-[#017E3F] text-white p-2.5 px-8 mt-1 lg:text-lg font-bold lg:py-3 lg:px-16">
-              Submit
-            </button>
-          </form>
+          <GoogleCaptchaWrapper>
+            <ContactForm />
+          </GoogleCaptchaWrapper>
 
           <h2 id="contact-section" className="mt-8!">
             Contact Us Directly
