@@ -96,9 +96,9 @@ const ContactForm = () => {
       setEmailSuccess(true);
       setSubmitMessage("Email sent successfully!");
       reset();
-    } catch (error: any) {
+    } catch (error) {
       setEmailError(true);
-      if (error?.response?.status === 429) {
+      if ((error as any)?.response?.status === 429) {
         setSubmitMessage("Too many submissions. Please try again later.");
       } else {
         setSubmitMessage("Something went wrong. Please try again later.");
