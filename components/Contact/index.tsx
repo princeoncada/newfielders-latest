@@ -13,7 +13,7 @@ export default function Contact() {
 
       <div className="flex flex-row md:px-4 h-auto relative bottom-16 gap-5 w-full mx-auto max-w-[1440px]">
         <section className="hidden lg:block w-1/5">
-          <div className="flex flex-col gap-5 sticky top-28">
+          <div className="flex flex-col gap-5 sticky top-32">
             <Link href={`/admission`} className="w-full">
               <Image
                 src={`/svg/Admission.svg`}
@@ -109,7 +109,7 @@ export default function Contact() {
             </div>
           </div>
 
-          <div id="location-section" className="w-full my-5">
+          <div id="location-section" className="w-full my-5!">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.126616832511!2d125.4962916764629!3d7.111322292892269!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x32f913c9b3566017%3A0xb1054b3c87885784!2sThe%20NewFields%20STEM%20School%20Of%20Davao!5e0!3m2!1sfil!2sph!4v1720711433794!5m2!1sfil!2sph"
               loading="lazy"
