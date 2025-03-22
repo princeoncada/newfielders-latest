@@ -29,6 +29,13 @@ const ContactForm = () => {
   // Initialize Google ReCaptcha
   const { executeRecaptcha } = useGoogleReCaptcha();
 
+  // Generate a random field name for the honeypot field
+  useEffect(() => {
+    const randomFieldName = `field_${Math.random().toString(36).substring(7)}`;
+    setHoneyPotFieldName(randomFieldName);
+    setLoadTime(Date.now());
+  }, []);
+
   // Extend schema to include dynamic honeypot field
   const dynamicFormSchema = formSchema.extend({
     [honeyPotFieldName]: z.string().optional().refine((value) => {
@@ -51,13 +58,6 @@ const ContactForm = () => {
       message: "",
     }
   });
-
-  // Generate a random field name for the honeypot field
-  useEffect(() => {
-    const randomFieldName = `field_${Math.random().toString(36).substring(7)}`;
-    setHoneyPotFieldName(randomFieldName);
-    setLoadTime(Date.now());
-  }, [honeyPotFieldName]);
 
   // Register the honeypot field in the form
   useEffect(() => {
@@ -92,12 +92,14 @@ const ContactForm = () => {
     }
 
     try {
+      console.log("test");
       await axios.post("/api/send-email", payload);
       setEmailSuccess(true);
       setSubmitMessage("Email sent successfully!");
       reset();
     } catch (error) {
       setEmailError(true);
+      console.log("test");
       if (axios.isAxiosError(error)) {
         if (error.response?.status === 429) {
           setSubmitMessage("Too many submissions. Please try again later.");
@@ -108,6 +110,7 @@ const ContactForm = () => {
         setSubmitMessage("An unexpected error occurred.");
       }
     } finally {
+      console.log("test");
       setLoading(false);
       setTimeout(() => {
         setEmailSuccess(false);
