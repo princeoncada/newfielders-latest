@@ -80,7 +80,7 @@ export default function News() {
 
       <div className="flex flex-row md:px-4 h-auto relative bottom-16 gap-5 w-full mx-auto max-w-[1440px]">
         <section className="hidden lg:block w-1/5">
-          <div className="flex flex-col gap-5 sticky top-28">
+        <div className="flex flex-col gap-5 sticky top-32">
             <Link href={`/contact`} className="w-full">
               <Image
                 src={`/svg/Contact Us.svg`}
