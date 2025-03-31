@@ -11,7 +11,7 @@ export default function Admissions() {
 
       <div className="flex flex-row md:px-4 h-auto relative bottom-16 gap-5 w-full mx-auto max-w-[1440px]">
         <menu className="hidden lg:block w-1/5">
-        <div className="flex flex-col gap-5 sticky top-32">
+          <div className="flex flex-col gap-5 sticky top-32">
             <Link href={`/contact`} className="w-full">
               <Image
                 src={`/svg/Contact Us.svg`}
@@ -76,13 +76,10 @@ export default function Admissions() {
           </p>
 
           <h2>
-            Modern Facilities and Qualified Faculty
+            Safe Learning Spaces
           </h2>
           <p>
-            We are proud of our modern facilities and highly
-            qualified faculty. Our commitment to small class
-            sizes ensures personalized attention, helping
-            students thrive both academically and personally.
+            We take pride in our capacity to provide a safe space for learning through the collective effort of our faculty, admin and staff.
           </p>
 
           <h2>
@@ -96,13 +93,10 @@ export default function Admissions() {
           </p>
 
           <h2>
-            Inclusive and Supportive Community
+            Parent-School Partnership
           </h2>
           <p>
-            Our inclusive community values and encourages every
-            student. We create an environment where all students
-            feel supported and are motivated to reach their full
-            potential.
+            NewFields envisions a learning community driven by mutual respect and between the home and the school.  It encourages parental involvement and presence in school activities to provide support to their children and to the school programs.
           </p>
 
           <h2>
@@ -110,7 +104,7 @@ export default function Admissions() {
           </h2>
           <p>
             By choosing The NewFields STEM School of Davao,
-            students invest in their education and their future
+            students invest in their education and in their future
             as innovators and leaders in STEM fields. Join us
             and be part of a transformative educational
             experience.

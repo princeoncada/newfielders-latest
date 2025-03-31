@@ -225,7 +225,7 @@ export default function NewFielders() {
             mathematics.
           </p>
 
-          <CarouselOne />
+          {/* <CarouselOne /> */}
 
           <h1 id="update-section">
             Updates on their Achievements

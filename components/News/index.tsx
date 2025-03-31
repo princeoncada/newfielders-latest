@@ -80,7 +80,7 @@ export default function News() {
 
       <div className="flex flex-row md:px-4 h-auto relative bottom-16 gap-5 w-full mx-auto max-w-[1440px]">
         <section className="hidden lg:block w-1/5">
-        <div className="flex flex-col gap-5 sticky top-32">
+          <div className="flex flex-col gap-5 sticky top-32">
             <Link href={`/contact`} className="w-full">
               <Image
                 src={`/svg/Contact Us.svg`}
@@ -121,7 +121,7 @@ export default function News() {
           </h1>
           <p>
             Welcome to the official announcements and updates
-            page of The Newfield&apos;s STEM School of Davao! Here,
+            page of The NewField&apos;s STEM School of Davao! Here,
             you&apos;ll find the latest news, important dates, and
             crucial information to keep students, parents, and
             staff in the loop.
@@ -135,13 +135,6 @@ export default function News() {
                 alt="Welcome Back"
               ></Image>
             </div>
-            <div>
-              <Image
-                className="rounded-md shadow-lg"
-                src={julyActivities}
-                alt="July Activities"
-              ></Image>
-            </div>
           </div>
 
           <h1 id="high-section">
@@ -151,7 +144,7 @@ export default function News() {
             A Year of Vibrant Achievements
           </h2>
           <p>
-            The 2023-2024 school year at NewFields STEM
+            The 2024-2025 school year at NewFields STEM
             School of Davao was packed with exciting and
             enriching activities. Our community enjoyed
             regular monthly events like Buwan ng Wika,
@@ -173,8 +166,7 @@ export default function News() {
             pushed our students to excel, while the Literary
             Festival fostered public speaking and self
             esteem. Our Foundation Day marked the school&apos;s
-            growth and achievements, and the first ever
-            Parents and Teachers Sports Fest promoted
+            growth and achievements, and the Parents and Teachers Sports Fest promoted
             camaraderie and fitness.
           </p>
           <p>
@@ -210,13 +202,7 @@ export default function News() {
             Hands-On Learning
           </h2>
           <p>
-            Hands on experimentation is a cornerstone of the
-            NewFields experience. Students engage in
-            practical activities like mixing household
-            chemicals in chemistry or building simple
-            machines in engineering projects, reinforcing
-            theoretical knowledge and fostering critical
-            thinking.
+            Hands-on learning and application to real-world problems are the cornerstones of the NewFields experience. Students engage in hands-on activities that immerses them practical experiences, fostering a deeper connection with the subject matter and fosters critical thinking.
           </p>
           <h2>
             First-Hand Observations
@@ -233,7 +219,7 @@ export default function News() {
             Community walks, tours, and field trips connect
             classroom learning to the real world. Visits to
             local markets, communities, and parks provide
-            educational opportunities that enhance the DEPED
+            educational opportunities that enhance the
             curriculum.
           </p>
 
