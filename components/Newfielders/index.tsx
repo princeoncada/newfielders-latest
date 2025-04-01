@@ -4,7 +4,6 @@ import Link from "next/link";
 import Hero from "@/components/partials/Hero";
 import CTA from "@/components/partials//CTA";
 import Groups from "./Groups";
-import CarouselOne from "./CarouselAlumni";
 import CarouselTwo from "./CarouselUpdates";
 
 export default function NewFielders() {

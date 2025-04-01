@@ -20,7 +20,6 @@ import Qualifiers from "@/assets/News/DCAA QUALIFIERS.png"
 import Medalist from "@/assets/News/TKD DCAA BRONZE MEDALIST.png"
 
 import welcomeBack from "@/assets/Shared/welbac.png";
-import julyActivities from "@/assets/Shared/julact.png";
 
 const NEWS_ASSETS = {
   pisay: {
